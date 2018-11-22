@@ -5,48 +5,63 @@ using namespace std;
 class time
 {
 	private:
-		int hour2;
-		int minute2;
-		int second2;
+		int hour;
+		int minute;
+		int second;
 	public:
 		time();
 		time(int a , int b, int c);
 		void xuat();
-		time tinh(time t)
-		{
-			int hour3;
-			int minute3;
-			int second3;
-			time tg = new time(3,2,3);
-			
-		}
+		void tinh(time,time);
 };
 time::time()
 {
-	hour2=0;
-	minute2=0;
-	second2=0;
+	hour=0;
+	minute=0;
+	second=0;
 }
 
 time::time(int a, int b,  int c)
 {
-	hour2=a;
-	minute2=b;
-	second2=c;
+	hour=a;
+	minute=b;
+	second=c;
 }
 void time::xuat()
 {
-	cout << hour2 << ":"  << minute2 << ":" <<second2<<endl; 
+	cout << hour << ":"  << minute << ":" <<second<<endl; 
 }
-void time::tinh()
-{
+{	
+	int hour1=0;
+	int minute1=0;
+	int second1=a.second+b.second;
+	while(second1>60)	
+	{
+		second-=60;
+		minute1++;
+	}
+	minute1+=a.minute+b.minute;
 	
+	while(minute1>60)
+	{
+		minute1-=60;
+		hour1++;
+	}
+	hour1+=a.hour+b.hour;
+	while(hour1>23)
+	{
+		hour1-=24;
+	}
+	cout<<hour1<<":"<<minute1<<":"<<second1;
+
+
 }
+
 int main()
 {
-	time *x1 = new time;
-	time *x2 = new time(3,2,5);
-	x1->xuat();
-	x2->xuat();
+	time x;
+	time a=time(3,4,5);
+	time b=time(4,5,6);
+	x.tinh(a,b);
 	return 0;
 }

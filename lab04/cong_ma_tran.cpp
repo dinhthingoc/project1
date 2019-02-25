@@ -5,8 +5,6 @@ using namespace std;
 
 void nhap_ma_tran(int a[][Maxc], int &m, int &n);
 void xuat_ma_tran(int a[][Maxc], int m, int n);
-void nhap_ma_tranb(int b[][Maxc], int &x, int &y);
-void xuat_ma_tranb(int b[][Maxc], int x, int y);
 void cong_ma_tran(int a[][Maxc], int m, int n, int b[][Maxc], int &x, int &y, int c[][Maxc], int &p, int &q);
 int main()
 {
@@ -72,29 +70,7 @@ void xuat_ma_tran(int a[][Maxc], int m, int n)
 		cout << endl;
 	}
 }
-void nhap_ma_tranb(int b[][Maxc], int &x, int &y)
-{
-	for (int i = 0; i < x; i++)
-	{
-		for (int j = 0; j < y; j++)
-		{
-			cout << "b[" << i << "][" << j << "]= ";
-			cin >> b[i][j];
-		}
-		cout << endl;
-	}
-}
-void xuat_ma_tranb(int b[][Maxc], int x, int y)
-{
-	for (int i = 0; i < x; i++)
-	{
-		for (int j = 0; j < y; j++)
-		{
-			cout << b[i][j] << "   ";
-		}
-		cout << endl;
-	}
-}
+
 void cong_ma_tran(int a[][Maxc], int m, int n, int b[][Maxc], int &x, int &y, int c[][Maxc], int &p, int &q)
 {
 	p = m;
